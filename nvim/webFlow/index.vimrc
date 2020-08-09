@@ -18,7 +18,6 @@
 " Plug 'brooth/far.vim'
 
 
-
 call plug#begin('~/.config/nvim/plugged')
 " Color theme, check the corresponding theme for terminal with nerdfonts.
 Plug 'sainnhe/gruvbox-material'
@@ -63,6 +62,8 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ },
 call plug#end()
 
+source $HOME/git/configs/nvim/general.vimrc
+
 " ALE configs.
 let g:ale_linters = {
 \   'javascript': ['flow-language-server'],
@@ -85,12 +86,6 @@ let g:LanguageClient_serverCommands={
 " Copy active file name to clipboard.
 noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
-" Update files
-noremap <silent> <F5> :let checktime<CR>
-
-" Map Leader key
-nnoremap <SPACE> <Nop>
-let mapleader=" "
 
 " Open GFiles with CTRL + P.
 map <Leader>p :GFiles<CR>
@@ -201,4 +196,3 @@ let g:js_file_import_strip_file_extension = 1
 let g:js_file_import_use_fzf = 1
 let g:js_file_import_omit_semicolon = 1
 
-source $HOME/git/configs/nvim/general.vimrc

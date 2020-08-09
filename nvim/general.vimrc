@@ -1,3 +1,7 @@
+" Map Leader key
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " Set relativenumber
 set relativenumber
 
