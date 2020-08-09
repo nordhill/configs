@@ -1,0 +1,8 @@
+alias g="git"
+
+alias h="history | grep $1"
+
+alias n="npm run"
+
+alias nt="npm run test -- $(pbpaste) --coverage"
+
