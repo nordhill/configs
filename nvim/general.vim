@@ -122,3 +122,6 @@ map <Leader>vs :s/
 " Copy active file name to clipboard.
 noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
+" Show various whitespace characters
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·
+set list
