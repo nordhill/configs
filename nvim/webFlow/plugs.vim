@@ -20,6 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tenfyzhong/CompleteParameter.vim'
 " Automatically imports js modules from being on top of a unimported function/module. Gives you also options if moduule has more than one same named exports. 
 Plug 'Galooshi/vim-import-js'
+" Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 " Makes your movement w, b, e etc.. respect camel cased text.
 Plug 'bkad/CamelCaseMotion'
 " Allows you to e.g highlight text content and choose what characters to surround it. Allows removing surrounding characters too.
@@ -54,3 +55,4 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ },
 call plug#end()
+

@@ -93,5 +93,32 @@ nnoremap <CR> :noh<CR><CR>k
 " Copy active file name to clipboard
 noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
+" Refresh files
+noremap <silent> <F5> :checktime<CR>
+
 " Create new horizontal tmux pane
 noremap <silent> <Leader>m :exe "!tmux split-window -h"<CR><CR>
+
+command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
+
+" Search for selected text, forwards or backwards.
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R>=&ic?'\c':'\C'<CR><C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gVzv:call setreg('"', old_reg, old_regtype)<CR>
+
+" Replace current selection from the whole file with another string
+map <Leader>s :%s//
+
+" Replace something within visual selection
+map <Leader>vs :s/
+
+" Copy active file name to clipboard.
+noremap <silent> <F4> :let @+=expand("%:p")<CR>
+
