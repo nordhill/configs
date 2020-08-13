@@ -4,12 +4,9 @@
 " Plug 'ruanyl/vim-fixmyjs'
 " using fixmyjs by default might conflict with import so you end up, by default, sorting your imports for example while just trying to import a module. Hence you might want to rebind Leader i by eg.  <Leader>i <Nop>
 " 
-" Plug 'tpop/vim-fugitive'
-"
 " Plug 'christoomey/vim-tmux-navigator'
 "
 " Plug 'brooth/far.vim'
-
 
 call plug#begin('~/.config/nvim/plugged')
 " Color theme, check the corresponding theme for terminal with nerdfonts.
@@ -54,5 +51,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ },
+" Various git commands and a diff tool
+Plug 'tpope/vim-fugitive'
 call plug#end()
 

@@ -84,14 +84,12 @@ set ignorecase smartcase
 
 "
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 " Cancel higlighting with C-c C-c
 nnoremap <C-c><C-c> :noh<return> 
 nnoremap <Leader>c :noh<return> 
 nnoremap <CR> :noh<CR><CR>k
-
-" Copy active file name to clipboard
-noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
 " Refresh files
 noremap <silent> <F5> :checktime<CR>
@@ -125,3 +123,12 @@ noremap <silent> <F4> :let @+=expand("%:p")<CR>
 " Show various whitespace characters
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:·
 set list
+
+" Navigate splits via ctrl+hjkl
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Refresh syntax highlighting - useful for large files that might break the highlighting
+nmap <F6> :filetype detect<CR>
