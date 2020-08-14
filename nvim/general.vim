@@ -30,9 +30,23 @@ syntax on
 "
 colorscheme gruvbox-material
 
-" Use clipboard for yanking, copy and pasting
-set clipboard=unnamedplus
+" Auto indentation when pasting
+" This breaks auto pairs plugin
+" set paste
 
+" Use clipboard for yanking, copy and pasting
+"set clipboard=unnamedplus
+"set clipboard^=unnamed
+" Using system clipboard with ldr c and v
+noremap <Leader>c "*y
+noremap <Leader>v "*p
+" using, I guess, a named registery so that we can do visual selecting and
+" pasting without losing the yanked content
+noremap y "0y
+noremap Y "0Y
+noremap x "0x
+noremap p "0p
+noremap P "0P
 " Allow recursive search from where neovim was opened from
 set path=.,/usr/include,,**
 
