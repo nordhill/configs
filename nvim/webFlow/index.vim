@@ -7,9 +7,11 @@
 "   current solution to use visual selection + ldr-vs and /,/\,r/g
 
 
-exe 'source' 'plugs.vim'
-exe 'source' '../general.vim'
-for f in split(glob('./plug_settings/*.vim'), '\n')
+let basePath='~/git-public/configs/nvim/webFlow/'
+
+exe 'source' basePath . 'plugs.vim'
+exe 'source' basePath . '../general.vim'
+for f in split(glob(basePath . 'plug_settings/*.vim'), '\n')
     exe 'source' f
 endfor
 
