@@ -7,5 +7,5 @@ let g:LanguageClient_serverCommands={
 \   'javascriptreact': ['flow', 'lsp'], 
 \}
 
-" Set languae client bindings to go  to definition.
+" Set languae client bindings to go to definition.
 nmap <silent><Leader>k <Plug>(lcn-definition)

@@ -13,4 +13,3 @@ for f in split(glob('$HOME/git/configs/nvim/webFlow/plug_settings/*.vim'), '\n')
 endfor
 
 let g:javascript_plugin_flow = 1
-

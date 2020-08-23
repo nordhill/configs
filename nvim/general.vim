@@ -146,3 +146,10 @@ nnoremap <C-H> <C-W><C-H>
 
 " Refresh syntax highlighting - useful for large files that might break the highlighting
 nmap <F6> :filetype detect<CR>
+
+" Paste current timestamp with some whitespace and asterix
+nnoremap <Leader>nt O<C-c>"=strftime("%c")<CR>Po* <C-c>o<C-c>kA
+
+" Open notes file in vim
+nnoremap <Leader>no :e ~/Notes/notes<CR>
+

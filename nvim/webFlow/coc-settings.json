@@ -1,0 +1,51 @@
+{
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact"
+  ],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•",
+  "signature.target": "echo",
+  "languageserver": {
+    "flow": {
+      "command": "${workspaceFolder}/node_modules/.bin/flow",
+      "args": [
+        "lsp"
+      ],
+      "filetypes": [
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx"
+      ],
+      "initializationOptions": {},
+      "requireRootPattern": true,
+      "settings": {},
+      "rootPatterns": [
+        ".flowconfig"
+      ]
+    }
+  },
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
+  "javascript.format.enabled": false,
+  "typescript.format.enabled": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "configFile": ".eslintrc.js"
+  }
+}

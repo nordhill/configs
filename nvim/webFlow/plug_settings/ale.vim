@@ -11,5 +11,4 @@ let g:ale_linters = {
 \   'javascript.jsx': ['flow-language-server', 'eslint'],
 \}
 
-map <F8> :ALENext<CR>
-map <F9> :ALEPrevious<CR>
+nnoremap <leader>T :call LanguageClient_textDocument_hover()<CR>
