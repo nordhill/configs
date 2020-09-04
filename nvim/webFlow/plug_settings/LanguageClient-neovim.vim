@@ -8,4 +8,4 @@ let g:LanguageClient_serverCommands={
 \}
 
 " Set languae client bindings to go to definition.
-nmap <silent><Leader>k <Plug>(lcn-definition)
+" nmap <silent><Leader>k <Plug>(lcn-definition)

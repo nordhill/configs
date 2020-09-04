@@ -45,10 +45,10 @@ Plug 'haya14busa/incsearch.vim'
 " A collection of language packs that have more then just syntax highlighting.
 Plug 'sheerun/vim-polyglot'
 " Language Server Protocol support.
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ },
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ },
 " Various git commands and a diff tool
 Plug 'tpope/vim-fugitive'
 " Highlight color number with the status of the mode from airline

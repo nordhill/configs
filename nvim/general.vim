@@ -21,8 +21,8 @@ set shiftwidth=2
 set mouse=a
 
 " Open and close quickfix 
-nmap  <Leader>ö :copen<CR>
-nmap  <Leader>öö :cclose<CR>
+nmap <Leader>ö :copen<CR>
+nmap <Leader>öö :cclose<CR>
 
 " Set color theme
 syntax on
@@ -42,11 +42,12 @@ noremap <Leader>c "*y
 noremap <Leader>v "*p
 " using, I guess, a named registery so that we can do visual selecting and
 " pasting without losing the yanked content
-noremap y "0y
-noremap Y "0Y
-noremap x "0x
-noremap p "0p
-noremap P "0P
+" using system clip board for all things
+noremap y "*y
+noremap Y "*Y
+noremap x "*x
+noremap p "*p
+noremap P "*P
 " Allow recursive search from where neovim was opened from
 set path=.,/usr/include,,**
 
@@ -126,7 +127,8 @@ vnoremap <silent> # :<C-U>
   \gVzv:call setreg('"', old_reg, old_regtype)<CR>
 
 " Replace current selection from the whole file with another string
-map <Leader>s :%s//
+" map <Leader>s :%s//
+nmap <leader>s :%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
 
 " Replace something within visual selection
 map <Leader>vs :s/
@@ -151,5 +153,11 @@ nmap <F6> :filetype detect<CR>
 nnoremap <Leader>nt O<C-c>"=strftime("%c")<CR>Po* <C-c>o<C-c>kA
 
 " Open notes file in vim
-nnoremap <Leader>no :e ~/Notes/notes<CR>
+nnoremap <Leader>no1 :e ~/Notes/notes<CR>
+nnoremap <Leader>no2 :e ~/Notes/notes2<CR>
 
+"Open file explorer 
+nnoremap <Leader>e :Ex<CR>
+
+
+nmap <silent><Leader>k gd<CR>
