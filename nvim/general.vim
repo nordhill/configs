@@ -21,14 +21,14 @@ set shiftwidth=2
 set mouse=a
 
 " Open and close quickfix 
-nmap  <Leader>ö :copen<CR>
-nmap  <Leader>öö :cclose<CR>
+nmap <Leader>ö :copen<CR>
+nmap <Leader>öö :cclose<CR>
 
 " Set color theme
 syntax on
 
-"
-colorscheme gruvbox-material
+"colorscheme gruvbox-material
+colorscheme dracula
 
 " Auto indentation when pasting
 " This breaks auto pairs plugin
@@ -42,11 +42,12 @@ noremap <Leader>c "*y
 noremap <Leader>v "*p
 " using, I guess, a named registery so that we can do visual selecting and
 " pasting without losing the yanked content
-noremap y "0y
-noremap Y "0Y
-noremap x "0x
-noremap p "0p
-noremap P "0P
+" using system clip board for all things
+noremap y "*y
+noremap Y "*Y
+noremap x "*x
+noremap p "*p
+noremap P "*P
 " Allow recursive search from where neovim was opened from
 set path=.,/usr/include,,**
 
@@ -73,7 +74,7 @@ set regexpengine=1
 
 " Faster file content navigating with these keys because of their easier
 " access
-map <silent> <S-l> $
+map <silent> <S-l> g_
 map <silent> <S-h> _
 map <silent> <S-k> {
 map <silent> <S-j> }
@@ -109,7 +110,7 @@ nnoremap <CR> :noh<CR><CR>k
 noremap <silent> <F5> :checktime<CR>
 
 " Create new horizontal tmux pane
-noremap <silent> <Leader>m :exe "!tmux split-window -h"<CR><CR>
+noremap <silent> <Leader>m :exe "!tmux split-window -h -p 20"<CR><CR>
 
 command! -nargs=1 SS let @/ = '\V'.escape(<q-args>, '\')|set hlsearch
 
@@ -126,7 +127,8 @@ vnoremap <silent> # :<C-U>
   \gVzv:call setreg('"', old_reg, old_regtype)<CR>
 
 " Replace current selection from the whole file with another string
-map <Leader>s :%s//
+" map <Leader>s :%s//
+nmap <leader>s :%s#<C-r><C-w>#<C-r><C-w>#gIc<Left><Left><Left><Left>
 
 " Replace something within visual selection
 map <Leader>vs :s/
@@ -151,5 +153,43 @@ nmap <F6> :filetype detect<CR>
 nnoremap <Leader>nt O<C-c>"=strftime("%c")<CR>Po* <C-c>o<C-c>kA
 
 " Open notes file in vim
-nnoremap <Leader>no :e ~/Notes/notes<CR>
+nnoremap <Leader>no1 :e ~/Notes/notes<CR>
+nnoremap <Leader>no2 :e ~/Notes/notes2<CR>
 
+"Open file explorer 
+nnoremap <Leader>e :Ex<CR>
+
+"Faster writing of files
+nnoremap <Leader>w :w<CR>
+
+"nnoremap <Leader>g :tjump <c-r><C-w><CR>
+nnoremap <Leader>R viw"*y<CR><bar>:Rg<CR>
+
+nmap <silent><Leader>k gd<CR>
+
+" No auto commenting
+set formatoptions-=cro
+
+nnoremap <C-b> :ls<CR>:b<Space>
+set splitbelow
+set splitright
+
+let g:javascript_plugin_flow = 1
+
+set showtabline=2
+set tabline+=%F
+
+"set tags=~/.cache/nvim/ctags/Users-mystes-kk-git-front-end-tags,tags
+
+"set completeopt+=menuone,noselect,noinsert
+
+set confirm
+"let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_c = '%t'
+
+set ttimeout
+set ttimeoutlen=1
+set ttyfast
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"

@@ -37,14 +37,23 @@
       ]
     }
   },
+  "diagnostic.displayByAle": false,
   "typescript.validate.enable": false,
   "javascript.validate.enable": false,
-  "javascript.format.enabled": false,
+  "javascript.format.enabled": true,
   "typescript.format.enabled": false,
+  "javascript.suggest.completeFunctionCalls": true,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "javascript.implementationsCodeLens.enable": false,
+  "javascript.referencesCodeLens.enable": false,
+  "typescript.implementationsCodeLens.enable": false,
+  "typescript.referencesCodeLens.enable": false,
+  "suggest.disableMenu": true,
   "eslint.autoFixOnSave": true,
+  "coc.preferences.jumpCommand": "vsplit",
+  "coc.preferences.triggerSignatureHelp": true,
   "eslint.options": {
     "configFile": ".eslintrc.js"
   }

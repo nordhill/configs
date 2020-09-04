@@ -1,16 +1,6 @@
 " Plugins to consider
-"
-" Automatically imports js modules from being on top of a unimported function/module. Gives you also options if moduule has more than one same named exports. 
-" Plug 'Galooshi/vim-import-js'
-" Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
-" 
-" Plug 'ruanyl/vim-fixmyjs'
-" using fixmyjs by default might conflict with import so you end up, by default, sorting your imports for example while just trying to import a module. Hence you might want to rebind Leader i by eg.  <Leader>i <Nop>
-" 
 " Plug 'christoomey/vim-tmux-navigator'
 "
-" Plug 'brooth/far.vim'
-
 call plug#begin('~/.config/nvim/plugged')
 " Color theme, check the corresponding theme for terminal with nerdfonts.
 Plug 'sainnhe/gruvbox-material'
@@ -32,9 +22,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Async lint engine to show lint errors and going to references.
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 " Syntax higlighting for js and Flow.
-Plug 'yuezk/vim-js'
+Plug 'pangloss/vim-javascript'
 " React highlighting
 Plug 'maxmellon/vim-jsx-pretty'
 " Shows status  in the left side of the file where you have done git changes.
@@ -45,14 +35,23 @@ Plug 'haya14busa/incsearch.vim'
 " A collection of language packs that have more then just syntax highlighting.
 Plug 'sheerun/vim-polyglot'
 " Language Server Protocol support.
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ },
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ },
 " Various git commands and a diff tool
 Plug 'tpope/vim-fugitive'
 " Highlight color number with the status of the mode from airline
 Plug 'ntpeters/vim-airline-colornum'
-Plug 'Galooshi/vim-import-js'
+Plug 'dracula/vim', { 'as': 'dracula' }
+" Comment and un comment lines fast
+Plug 'preservim/nerdcommenter'
+" Ctags manager
+"Plug 'ludovicchabant/vim-gutentags'
+" Javascript importing
+"Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
+" Fast horizontal navigation
+Plug 'unblevable/quick-scope' 
+Plug 'mg979/vim-visual-multi' 
 call plug#end()
 
