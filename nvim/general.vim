@@ -43,11 +43,11 @@ noremap <Leader>v "*p
 " using, I guess, a named registery so that we can do visual selecting and
 " pasting without losing the yanked content
 " using system clip board for all things
-noremap y "*y
-noremap Y "*Y
-noremap x "*x
-noremap p "*p
-noremap P "*P
+noremap y "+y
+noremap Y "+Y
+noremap x "+x
+noremap p "+p
+noremap P "+P
 " Allow recursive search from where neovim was opened from
 set path=.,/usr/include,,**
 
