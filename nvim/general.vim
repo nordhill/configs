@@ -26,9 +26,10 @@ nmap <Leader>öö :cclose<CR>
 
 " Set color theme
 syntax on
-
-"
-colorscheme gruvbox-material
+set termguicolors
+"colorscheme gruvbox-material
+colorscheme palenight
+"set background=dark
 
 " Auto indentation when pasting
 " This breaks auto pairs plugin
@@ -65,8 +66,6 @@ set expandtab
 
 " Vertically center scroll offset
 set so=10
-
-set termguicolors
 
 set guicursor=
 
@@ -161,3 +160,11 @@ nnoremap <Leader>e :Ex<CR>
 
 
 nmap <silent><Leader>k gd<CR>
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+highlight QuickScopePrimary guifg='#00C7DF' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#afff5f' gui=underline ctermfg=81 cterm=underline
+
+let g:qs_max_chars=150
+

@@ -54,5 +54,7 @@ Plug 'tpope/vim-fugitive'
 " Highlight color number with the status of the mode from airline
 Plug 'ntpeters/vim-airline-colornum'
 Plug 'Galooshi/vim-import-js'
+Plug 'unblevable/quick-scope'
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
